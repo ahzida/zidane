@@ -9,11 +9,11 @@ $keyVaultName = "zidane-sentia-key"
 $keyVaultSpAppId = "cfa8b339-82a2-471a-a3c9-0fc0be7a4093"
 $VN = "zidane-sentia-network"
 $storageAccountKey = "key1"
-$userID = "z@azidane2018gmail.onmicrosoft.com"
+$userID = "x"
 $IP = "sentiatestip"
 
 #set subscription
-Set-AzContext -SubscriptionId 1cd8f645-3307-424c-828a-77723a9c9cdf
+Set-AzContext -SubscriptionId "x"
 
 
 #create resource group
@@ -48,7 +48,7 @@ Enable-AzStorageStaticWebsite -Context $storageaccount.Context -IndexDocument in
 
 #Create Network 
 $sub = New-AzVirtualNetworkSubnetConfig -Name sentiaSubnet -AddressPrefix "10.0.1.0/24"
-New-AzVirtualNetwork -Name $VN -ResourceGroupName $resourceGroupName -Location $location -AddressPrefix "10.0.0.0/16" -Subnet $sub
+New-AzVirtualNetwork -Name $VN -ResourceGroupName $resourceGroupName -Location $location -AddressPrefix "10.0.0.0/16" -Subnet $sub -Tag @{Sentia=“pre-prod-VN"}
 
 
 #Enable service endpoint for Azure Storage on an existing virtual network and subnet.
@@ -60,7 +60,9 @@ $subnet = Get-AzVirtualNetwork -ResourceGroupName $resourceGroupName -Name $VN |
 Add-AzStorageAccountNetworkRule -ResourceGroupName $resourceGroupName -Name $storageAccountName -VirtualNetworkResourceId $subnet.id
 
 
-#IP and Application Gateway ( load balancer )
+#IP and Application Gateway ( load balancer ) 
+
+
 
 $pip = New-AzPublicIpAddress -ResourceGroupName $resourceGroupName -Location $location -Name $IP -AllocationMethod Dynamic -Tag @{Sentia=“pre-prod-ip"}
 $gipconfig = New-AzApplicationGatewayIPConfiguration -Name SentiaIPConfig -Subnet $subnet
@@ -78,5 +80,14 @@ $appgw = New-AzApplicationGateway -Name SentiaAppGateway -ResourceGroupName $res
 
 Get-AzPublicIPAddress -ResourceGroupName $resourceGroupName -Name $IP
 
-#then added A record for the site with my IP
+#then i added A record for the site with my IP
+
+
+
+
+
+
+
+
+
 
