@@ -17,6 +17,6 @@ this script is created to deploy storage account, keyvault, web app, virtual net
 
 How?
 
-- you can use Azure.ps1 script with az powershell module "https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-3.3.0" it will create all the resources in a resource group and at the end it will represent the app gatewat public IP address to access the site.
+- you can use "Azure.ps1" script with az powershell module "https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-3.3.0" it will create all the resources in a resource group and at the end it will represent the app gatewat public IP address to access the site.
 
 - you can select template deployment on azure and use the ARM Template " template.JSON "
