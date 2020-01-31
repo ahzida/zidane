@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "publicIPAddresses_sentiatestip_domainNameLabel": {
+            "value": null
+        },
+        "sites_zidanesentia_name": {
+            "value": null
+        },
+        "serverfarms_newsite_name": {
+            "value": null
+        },
+        "vaults_zidane_sentia_key_name": {
+            "value": null
+        },
+        "publicIPAddresses_sentiatestip_name": {
+            "value": null
+        },
+        "storageAccounts_zidanesentiastorage_name": {
+            "value": null
+        },
+        "applicationGateways_SentiaAppGateway_name": {
+            "value": null
+        },
+        "virtualNetworks_zidane_sentia_network_name": {
+            "value": null
+        }
+    }
+}
