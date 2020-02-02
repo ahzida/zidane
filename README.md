@@ -25,6 +25,9 @@ https://docs.microsoft.com/en-gb/azure/storage/common/storage-account-create?tab
 
 How?
 
-- you can use "Azure.ps1" script with az powershell module "https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-3.3.0" it will create all the resources in a resource group and at the end it will represent the app gateway public IP address to access the site.
+you can use two methods to deploy the resources:
 
-- you can select template deployment on azure and use the ARM Template " template.JSON "
+
+1- you can use "Azure.ps1" script with az powershell module "https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-3.3.0" it will create all the resources in a resource group and at the end it will represent the app gateway public IP address to access the site.
+
+2- you can select template deployment on azure and use the ARM Template " template.JSON "
