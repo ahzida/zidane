@@ -33,7 +33,7 @@ you can use two methods to deploy the resources:
 2- you can select template deployment on azure and use the ARM Template " template.JSON "
 
 
-Note:
+# Note:
 
 Instead of storing Resource Manager templates on your local machine, you may prefer to store them in an external location. You can store templates in a source control repository (such as GitHub). Or, you can store them in an Azure storage account for shared access in your organization.
 
