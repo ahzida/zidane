@@ -1,4 +1,4 @@
-# zidane
+# zidane ARM Template
 
 What?
 
